@@ -1,5 +1,5 @@
 {
-  description = "A template for Nix based C++ project setup.";
+  description = "libacars --- libacars is a library for decoding ACARS message contents.";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -20,8 +20,7 @@
           zlib
           cmake
           libxml2
-
-          (import ./default.nix { inherit pkgs; })
+          # (import ./default.nix { inherit pkgs; })
         ];
 
         propagatedBuildInputs = [
