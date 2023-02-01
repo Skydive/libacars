@@ -17,8 +17,8 @@
         name = "libacars-shell";
         buildInputs = with pkgs; [
           pkg-config
-          zlib
           cmake
+          zlib
           libxml2
           # (import ./default.nix { inherit pkgs; })
         ];
