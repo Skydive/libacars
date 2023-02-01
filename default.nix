@@ -6,12 +6,10 @@ pkgs.stdenv.mkDerivation {
 
   enableParallelBuilding = true;
 
-
-  nativeBuildInputs = with pkgs; [
-    pkg-config
-  ];
+  outputs = [ "out" "dev" ];
 
   buildInputs = with pkgs; [ 
+    pkgconfig
     cmake
   ];
 
@@ -34,6 +32,6 @@ pkgs.stdenv.mkDerivation {
     cp libacars/libacars-2.so.2 $out/lib
     cp libacars/libacars-2.so $out/lib
     cp libacars/libacars-2.a $out/lib
-    cp libacars/libacars-2.pc $out/lib
+    mkdir -p $out/lib/pkgconfig
   '';
 }

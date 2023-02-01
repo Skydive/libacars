@@ -20,6 +20,8 @@
           zlib
           cmake
           libxml2
+
+          (import ./default.nix { inherit pkgs; })
         ];
 
         propagatedBuildInputs = [
