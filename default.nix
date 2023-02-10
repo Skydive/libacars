@@ -14,8 +14,8 @@ in
       # ./move-lib64.sh
     # ];
 
-    buildInputs = with pkgs; [ 
-      pkgconfig
+    nativeBuildInputs = with pkgs; [ 
+      pkg-config
       cmake
       zlib
       libxml2
