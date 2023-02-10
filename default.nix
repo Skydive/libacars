@@ -17,9 +17,12 @@ in
     nativeBuildInputs = with pkgs; [ 
       pkg-config
       cmake
+    ];
+
+    propagatedBuildInputs = with pkgs; [
       zlib
       libxml2
-    ];
+    ]
 
     # preInstallPhases = preInstallPhases ++ ''
       
