@@ -7,7 +7,7 @@ in
     name = "libacars-${version}";
     src = ./.;
 
-    outputs = [ "out" ];
+    outputs = [ "out" "lib" "dev" ];
     enableParallelBuilding = true;
 
     # setupHooks = [
@@ -22,7 +22,7 @@ in
     propagatedBuildInputs = with pkgs; [
       zlib
       libxml2
-    ]
+    ];
 
     # preInstallPhases = preInstallPhases ++ ''
       
